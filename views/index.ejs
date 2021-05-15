@@ -1,0 +1,29 @@
+<form method='post' action="/calc">
+  <input type="number" name="num1" id="">
+  <select name="operation" id="">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  <input type="number" name="num2" id="">
+  <button type="submit">Calc</button>
+</form>
+
+<% if(accounts.length> 0) { %>
+  <h2>Accounts:</h2>
+  <ul>
+    <% accounts.forEach(account=> { %>
+      <li>
+        <%= account.num1 %>
+          <%= account.operation %>
+            <%= account.num2 %> =
+              <%= account.result%>
+      </li>
+      <% }) %>
+  </ul>
+  <% } %>
+
+    <!--   <pre>
+  <%= JSON.stringify(accounts, null, 2)%>
+</pre> -->
